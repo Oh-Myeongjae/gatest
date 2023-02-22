@@ -59,3 +59,16 @@ jobs:
         --region ap-northeast-2 \
         --acl private \
         ./gitdeploybucket.zip s3://gitdeploybucket/
+
+    # Deploy
+    - name: Deploy
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      run: |
+        aws deploy create-deployment \
+        --application-name gatet \
+        --deployment-group-name gadeploy \
+        --file-exists-behavior OVERWRITE \
+        --s3-location bucket=gitdeploybucket,bundleType=zip,key=gitdeploybucket.zip \
+        --region ap-northeast-2
