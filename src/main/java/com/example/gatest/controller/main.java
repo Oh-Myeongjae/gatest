@@ -8,6 +8,6 @@ public class main {
 
     @GetMapping("/")
     public String print(){
-        return "접속확인";
+        return "내용변경";
     }
 }
