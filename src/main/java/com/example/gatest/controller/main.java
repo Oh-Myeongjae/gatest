@@ -14,6 +14,6 @@ public class main {
     @GetMapping("/")
     public String print(){
         System.out.println("word = " + word);
-        return "git 액션적용1 "+word;
+        return "git 액션적용 "+word;
     }
 }
