@@ -70,5 +70,5 @@ jobs:
         --application-name gatet \
         --deployment-group-name gadeploy \
         --file-exists-behavior OVERWRITE \
-        --s3-location bucket=gitdeploybucket,bundleType=zip,key=gitdeploybucket.zip \
+        --s3-location bucket=gitdeploybucket,bundleType=zip,key=gitdeploybucket.zip\
         --region ap-northeast-2
