@@ -8,6 +8,6 @@ public class main {
 
     @GetMapping("/")
     public String print(){
-        return "내용변경";
+        return "git 액션적용";
     }
 }
