@@ -28,10 +28,10 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-
-    - name: Grant execute permission for gradlew
       env:
         enString: ${{ secrets.ENSTRING }}
+
+    - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
     - name: Build with Gradle
