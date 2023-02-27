@@ -28,6 +28,9 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
+
+    - name: Generate Environment Variables File for Properties
+      uses: microsoft/variable-substitution@v1
       env:
         enString: ${{ secrets.ENSTRING }}
 
